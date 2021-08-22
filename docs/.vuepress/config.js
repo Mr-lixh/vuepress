@@ -1,6 +1,8 @@
+const { navbar, sidebar } = require('./configs')
+
 module.exports = {
   lang: 'zh-CN',
-  title: 'xhli 的个人博客',
+  title: 'xhli 的文档集',
   description: '这是我的 VuePress 站点',
 
   themeConfig: {
@@ -9,39 +11,10 @@ module.exports = {
     locales: {
       '/': {
         // navbar
-        navbar: [
-          {
-            text: 'VuePress',
-            children: ['/VuePress/guide/getting-started.md',
-              {
-                text: '官方文档',
-                link: 'https://v2.vuepress.vuejs.org/zh/',
-              }],
-          },
-          {
-            text: 'Vue',
-            children: [
-              {
-                text: '官方文档',
-                link: 'https://cn.vuejs.org/v2/guide/',
-              }
-            ],
-          },
-        ],
-
+        navbar: navbar.zh,
         // sidebar
         sidebarDepth: 3,
-        sidebar: {
-          '/VuePress/': [
-            {
-              text: '指南',
-              children: [
-                '/VuePress/guide/getting-started.md',
-                '/VuePress/guide/theme.md',
-              ],
-            },
-          ],
-        },
+        sidebar: sidebar.zh,
 
         // page meta
         editLinkText: '在 GitHub 上编辑此页',
